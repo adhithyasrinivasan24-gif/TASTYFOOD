@@ -202,3 +202,4 @@ npm run test:watch
 
 The tests use mocked cart/menu data for predictable component tests; they do not require the external food API. They verify the components' rendered output and event callbacks, while API integration can be tested separately.
 # TASTYFOOD
+# TASTYFOOD
