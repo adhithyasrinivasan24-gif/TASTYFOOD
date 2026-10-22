@@ -1,0 +1,4 @@
+import { Link } from 'react-router-dom';
+import { Plus, Star } from 'lucide-react';
+import { useCart } from '../store/cartStore.js';
+export default function FoodCard({food,onAdded}){const {addToCart}=useCart();function add(){addToCart(food);onAdded?.(`${food.name} added to cart`)}return <article className="food-card"><Link to={`/food/${food.id}`} className="food-image"><img src={food.image} alt={food.name} loading="lazy"/><span className="category-pill">{food.category}</span></Link><div className="food-info"><div className="food-rating"><Star size={14} fill="currentColor"/>{Number(food.rating||0).toFixed(1)}</div><Link className="food-title" to={`/food/${food.id}`}>{food.name}</Link><p>{food.description}</p><div className="food-bottom"><strong>₹{food.price}</strong><button onClick={add} aria-label={`Add ${food.name} to cart`} className="add-button"><Plus size={19}/></button></div></div></article>}

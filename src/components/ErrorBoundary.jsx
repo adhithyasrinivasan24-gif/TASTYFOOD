@@ -1,0 +1,2 @@
+import { Component } from 'react';
+export default class ErrorBoundary extends Component { constructor(p){super(p);this.state={failed:false}} static getDerivedStateFromError(){return {failed:true}} componentDidCatch(error){console.error('FreshBite UI error:',error)} render(){return this.state.failed?<main className="message"><h1>Something went wrong</h1><p>Please reload the app and try again.</p><button onClick={()=>location.reload()}>Reload app</button></main>:this.props.children} }

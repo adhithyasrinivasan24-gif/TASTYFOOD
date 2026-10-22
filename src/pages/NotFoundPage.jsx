@@ -1,0 +1,1 @@
+import {Link} from 'react-router-dom';export default function NotFoundPage(){return <main className="page notice"><h1>Page not found</h1><p>That page isn't part of our menu.</p><Link className="button primary" to="/">Return home</Link></main>}
